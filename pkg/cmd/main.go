@@ -5,6 +5,7 @@ import (
 
 	"github.com/rguilmont/types-from-different-scopes-issue/pkg/either"
 	"github.com/rguilmont/types-from-different-scopes-issue/pkg/pkga"
+	"github.com/rguilmont/types-from-different-scopes-issue/pkg/pkgb"
 )
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 
 	either.Fold(a,
 
-		func(right pkga.Test) bool {
+		func(right pkgb.Test) bool {
 			fmt.Println("It works!", right)
 			return true
 		},
